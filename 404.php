@@ -1,26 +1,43 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @author      Flurin Dürst
- * @version     1.2
- * @since       WPSeed 0.1
- */
-?>
+<?php get_header(); ?>
 
+			<div id="content">
 
-<? get_header(); ?>
+				<div id="inner-content" class="wrap cf">
 
-<!-- content » 404 -->
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-  <div class="content">
+						<article id="post-not-found" class="hentry cf">
 
-    <h1>Error#404</h1>
+							<header class="article-header">
 
-    <div class="error404">
-      Page could not be found.
-    </div>
+								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
 
-  </div>
+							</header>
 
-<? get_footer(); ?>
+							<section class="entry-content">
+
+								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+
+							</section>
+
+							<section class="search">
+
+									<p><?php get_search_form(); ?></p>
+
+							</section>
+
+							<footer class="article-footer">
+
+									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
+
+							</footer>
+
+						</article>
+
+					</main>
+
+				</div>
+
+			</div>
+
+<?php get_footer(); ?>

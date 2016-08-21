@@ -1,160 +1,286 @@
-# CHANGELOG
+# BONES CHANGE LOG & HISTORY
 
-## 0.13.0 «Scale»
-* rework scaling functionality
-* bugfix enqueue jQuery from Google CDN
-* bugfix remove hardcoded scripts from footer
-* bugfix (typo) in backend function `onlyadmin_update`
+This theme is meant to make development easier & take
+advantage of modern web development & design techniques.
+For more information, please visit:
 
-## 0.12.0 «Heads up»
-* enqueue scripts, styles, fonts
-* add wp_head
-* add wp_head cleaner
-* add function to hide core updates for non-admins
-* cleanups
-* update bower dependencies
-* add php-tags for wp-cli compatibility
-* reorganize/cleanup functions
-* cleanup/flex navigation
-* adjustments for w3c compatibility
-* use page as index
-* add logo
+http://themble.com/bones/
 
-## 0.11.0 | 05.07.2016 | «CleanFlex»
-* huge cleanup/simplification of css and templates
-* use flexbox as template default
-* simplify sticky footer
-* re-organize javascript files/add essentials.js
-* bugfix mobilemenu
+Author: Eddie Machado
 
-## 0.10.0 | 04.07.2016
-* disable admin bar in wp-setup function
-* add open graph image tags
-* add styling for external links
-* add template/functions for acf flexible content
-* bugfixes
-* cleanup
-  * remove subnav preset
-  * remove forward-to-child template
-  * remove contact template
-  * re-organize/cleanup assets folder
+*******************************************************************
 
-## 0.9.0 | 27.06.2016
-* add onepage template
-* remove short open tags on functions files to satisfy wpcli
-* fix title, close functions
-* cleanups, file re-organizations
+/* 1.71 update */
+- added spacing to the password fields (thx @murtaugh)
+- fixed calc percentage function
+- removed chrome frame support
 
-## 0.8.0 | 10.06.2016
-* update/clean node_modules (update gulp-if version, remove deprecated minify-css, add cssnano)
-* preset image processing quality to 100%
-* seperate google maps javascript/jQuery from other javascript/jQuery
-* switch from wp_nav_menu to wp_list_pages
-* coding guideline update: csscomb, convert tabs to spaces (based on codeguide.co)
-* add the most important attributes to hamburger at nav.scss
-* added marker.click preset to googlemaps template
-* renaming versioning to WPSeed
-* cleanup
 
-## 0.7.0 | 18.05.2016 | WPSeed
-* **renamed to WPSeed**
-* admin bar is now only shown on hover
-* added font-size variable for default font-size on all elements
-* added basic table styling and sanitizing
-* changed versioning of main.js to full-file-version instead of seperate versions per function
+/* 1.(I've lost track so I'm starting at)7 update */
+- reworked Sass files and broke them into partials
+- setup Sass syntax and new mixins / functions
+- added a ton of pull requests (thanks everyone)
+- developed a bro crush on everyone who's helped contribute, thanks guys
+- also lady crush since I don't want to leave out the helpful women
+- animal crush? Who knows, just thanks everyone
+- added pull paths for the includes in functions.php ( get_template_directory() )
+- renamed clearfix to cf (just cuz i feel like it)
+- removed custom search form since WordPress now supports HTML5 search form
+- moving bones ahoy function to main functions file
+- added content width and replaced css w/ the new markup for oembeds
+- put the nav link functions directly in the templates, no need for extra functions
+- removed navigation fallbacks, because really you never use those anyway
+- removed the_author_posts_link() for a better more native function
+- moved all the extra reset stuff to normalize, I mean these styles aren't changing so it's cool
+- added wp_link_pages for people who are evil and break articles up into multiple pages
+- worked out Theme Check issues
 
-## 0.6.0 | 27.04.2016
-* added animated hamburger icons to mobile nav (thanks to https://jonsuh.com/hamburgers/)
-* re-added responsive css classes `.desktop` and `.mobile`
-* added general variables and presets (isTouch / $vpWidth) to main.js
-* fixed bower-config & moved normalize into bower
-* added pointer-event attributes to predefined hidden/shown classes
-* added variables to functions
-* renamed some variables
-* unified file-versions (1.02.15 => 1.2.15)
-* fixed tab indents
-* cleanup & documentation
+/* 1.5 update */
+- sorted out new scss structure and cleaned up files
+- more pull requests and language translations
+- added some default form styles
+- added a bunch of new style options and variables
 
-## 0.5.0 | 25.02.2016 | public beta
-* added custom styles dropdown for tinymce
-* added `current-page-ancestor` to active class in nav css
-* added subnav structure template
-* simplified navigation to use the the same <nav> for desktop & mobile
-* removed `scrolling mobile nav`
-* removed `IEHACK` - could add [dino](https://github.com/CLUS-Werbeagentur/dino) in the future
-* condition for google maps API
-* bugfixes
+/* 1.4 update */
+- updated Modernizr to 2.6.2
+- merged a ton of pull requests (thanks guys and gals!)
+- added windows 8 tile support
+- put LESS back in (too many requests)
 
-## 0.4.0 | 23.02.2016
-* moved paragraph default-styling from vars.scss to content.scss
-* added forward template
-* multiple cleanups/re-structuring
-* reworked version numbers from now on: [main].[sub].[fix/cleanup/minimal-change] => 0.5.2, 0.14.3, 1.25.19
+**v1.3 update**
+- removed version number from scripts & styles (thanks James)
+- removed LESS (it's over Johnny, It's OVER!)
+- changed post-content to entry-content
+- added other changes to better align with Readability standards: http://www.readability.com/developers/guidelines (thanks @ChrisSki)
+- added comment gravatar variable
+- added fix for author name not showing in archive.php
+- removed unused css files (that were mistakingly compiled)
+- BORDER BOX ALL THE THINGS (http://paulirish.com/2012/box-sizing-border-box-ftw/)
 
-## 0.32 | 21.01.2016
-* added first version of README.md
-* reworked responsive mixins
-* cleanup & update composer
-* update gulpfile
-* added iehack
+**v1.25 update**
+- updated custom post type page for translation
+- added => to responsive jquery
+- cleaned up theme tags (which make NO sense, but are best practice, go figure)
+- updated html element to match hb5
+- fixed echo problem on admin.php
+- updated normalize (LESS also had some missing styles so I added them)
+- GetComputedStyle fix for IE (for responsive js)
+- cleaned up mixins (border radius)
+- added translations! (Chinese, Spanish)
 
-## 0.31 | 21.1.2016
-* added flexbox fillup function `flexfill()`
+**v1.2 HUGE update**
+- merge responsive version with classic
+- remove post title from read more link (it's way too long)
+- removed readme.txt (it was pointless)
+- organized info for each file called in on the functions page
+- added custom gravatar call in comments
+- i'm leaving jQuery to a plugin (that way I'm not providing dated jQuery)
+- added translation folder
+- put everything inside stuff so it's easier to be translated
+- added an identifier in each 404 area so you know what template is showing
+- remove custom walker. I think that's better left for you guys to do
+- fixed some spelling errors
+- added some translation options in the comments file
+- added role=navigation to footer links
+- deleted image.php (who really uses that anyway)
+- added sidebar to search.php
+- added class to custom post type title
+- added link to custom meta box
+- removed selectivizr
+- updated html elements with new classes for IE
+- added new mobile meta tags
+- removed pinned site meta tag for IE9
+- merged base.css into style.css for one less call in the header
+- added styleguide page and styles (oh yea!)
+- added nav class to both menus
+- removed "Powered by Wordpress & Bones" from footer, because let's face it: we all delete this anyway.
+- added button class to submit comment button
+- removed html5 placeholder fallback (you should be using Gravity Forms)
+- added slug and rewrite to custom post type for easier urls
+- renamed the border radius mixins so they were easer to remember
+- removed duplicate box shadow mixin
+- deleted the plugins.php file
+- facebook og:meta can be better handled by a plugin (or Yoast's SEO plugin)
+- rel=me can also be handled by SEO plugin or another plugin
+- removed author.php (you can use archive.php or add it yourself)
 
-## 0.3 | 05.11.2015
-* re-organized theme enviroment (based on sage workflow)
-    * new folder structure
-    * splitting files into assets (dev) and dist (output)
-    * new gulpfile
-    * bower
-    * wiredep
-    * asset-builder
-* reworked responsive functionality
-* added new plugins
-* added theme language support
-* cleaned up stuff
+**v1.09 more updates**
+- updated admin.php to include custom widget examples, admin login styles, and admin footer
+- login.css added for custom login styles
+- custom login logo included
 
-### 0.21 | 23.10.2015
-* added home template
-* changed admin bar handling to plugin "Better Admin Bar"
-* added the_post_thumbnail_url function
-* several bug fixes (mobilemenu and others)
+**v1.09 updates**
+- added snippet to remove < p > from imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+- added custom admin functions file
+- updated normalize
+- added site description < p > to the header
+- added page-ancestor class for nav to css
+- added facebook open graph and google+ meta info (plugins.php)
+- added a font-face example to stylesheet
+- removed extra < div > around search function
+- added role=article to article element
+- added tag & category examples to custom post type
 
-### 0.2 | 22.10.2015
-* added demo functionality
-* added footer
-* added template "team"
-* added additional styling-presets
-* deleted template "subcontent" (because new template "team")
-* renamed template "googlemaps" to contact
-* adjusted csscomb
 
-### 0.18 | 22.10.2015
-* added blog/post functionality
+**v1.08 release (hellz yea!)**
+- replaced default.css with normalize.css
+- added responsive.css
+- completely revamped styles & stylesheets
+- moved most design related styles to style.css
+- newer, cleaner default comment styles
+- refined grid system
+- added pubdate and time microformat to all templates
+- changed page navi from div to nav and from ul to ol
+- added Read More filter to replace the [...]
+- removed default "Bones" text in footer if you don't have a menu
+- updated modernizr to 2.0.6 & added FULL support (respond, load, ect)
+- updated jQuery to 1.6.2
+- added IE6 meta to remove toolbar
+- added IE9 meta for pinned sites
+- added viewport meta to help responsive designs
+- removed PNG fixes for IE6...(fuck 'em)
+- added prompt for IE6 users to install Google Chrome Frame
+- removed respond.js since it's called in modernizr
+- removed DOMAssistant for ancient IE users
+- removed flowplayer folder (lighten the load)
+- remove ie folder for IE scripts that are now gone
+- moved translation function to bones.php
+- removed overflow: hidden from some comment styles
+- cleaned up head with more removals
+- moved related posts & page navi plugin to bones.php
+- removing wp version from rss feed
+- removing useless wordpress dashboard widgets
+- organizing bones & functions for simplicity
+- removed analytics
+- added auto hyphens to normalize.css (http://blog.fontdeck.com/post/9037028497/hyphens)
+- removed the custom header image support
+- removed all the favicons & icons
+- added proper title tag
+- added google+ link to profile
+- added rel=me thanks to yoast's tutorial
+- added author.php template
+- removed html5 video shortcode
 
-### 0.17 | 21.09.2015
-* updated comment-structure
-* cleanups
 
-### 0.16 | 21.09.2015
-* added css variable $fs_text for text-size
+**v1.07 more changes**
+- updated selectivizr
+- compressed images
 
-### 0.15 | 21.09.2015
-* re-organized functions
+**v1.07 changes**
+- added modernizr 2.0 custom build
+- added IE=edge,chrome=1 for older, shitty browsers
+- removed iphone stuff ( you can add later if you want it )
+- changed h1 in the header to a p
+- removed *font-size: small; from default.css
+- removed empty selectors on default.css stylesheet
+- fixed errors on style.css (mostly removing example using parenthesis)
+- added jquery 1.6.1
 
-### 0.14 | 18.09.2015
-* added urlcontains function
-* re-organized general functions
+**v1.07 w00t!**
+- changed clear to clearfix across the board
+- added 320 & Up Boilerplate Extension by Andy Clarke
+- renamed modernizr to the current version file
+- added all the different sized images & icons
+- updated DOMAssistant to newest version
 
-### 0.13 | 14.09.2015
-* added google map API config
-* added googlemap templae
 
-### 0.12  | 11.09.2015
-* added mobile navigation
-* re-worked responsive mixins
-* added function to disable html-hardcoded thumbnail-dimensions on images
-* multiple cleanups
+**v1.06 More Updates**
+- added theme translation to all files
+- removed categories form page meta info
+- fixed confusing copyright issues
+- removed the unneeded author / tag / ect archive title from taxonomy-custom-cat.php
 
-### 0.11
-* multiple cleanups
+
+**v1.06 Updates**
+- changed name of default stylesheet to default so it's easier to
+	debug. (having two stylesheets named style is confusing)
+- added clearing class to #inner-header and #inner-footer
+- added bones body class depending on what browser
+- changed the_author to the_author_posts_link in single.php and archive.php
+- changed the_author to the_author_posts_link in single-custom_type.php
+- added custom taxonomy template
+- added browser classes to style.css
+- removed lazy load (sorry, it sucked)
+- added twitter and facebook user profiles
+- added post formats to bones.php core
+- fixed menu system (thanks to Dom & Mattias)
+- added categories & tag info for custom post types
+- adding standard categories & tags to custom post type example
+
+
+**v1.06**
+- added custom post type and taxonomies file
+- created custom post type template
+- added readme.txt file (really for no reason at all)
+- fixed the margin on the comments title
+- removed duplicate text-align calls in css **Thanks Dom**
+- added add_theme_support( 'automatic-feed-links' ) replacing
+	the deprecated automatic_feed_links();
+- added the language_attributes(); to the html tag
+- replaced attribute_escape with esc_attr() in search.php
+- bloginfo('url') in header replaced with echo home_url()
+- using get_template_directory_uri() instead of bloginfo('template_directory')
+- using get_the_author_meta('display_name') instead of deprecated function
+- fixed error in bones.php for menu fallback **thanks Mark**
+- creating thumbnail fallback functions
+- added header.js and moved modernizr & imgsizer in that file
+- added lazy load jquery plugin
+- moved dd_belatedpng.js inside the ie folder in the libs folder
+- changed class of main menu to .menu from .nav
+- added more css for menu
+- added additional selectors to the style.css in the root
+- removed the top margin of the footer menu
+
+
+**v1.05**
+- fixed typos in style.css file & logs
+- updated selectivizr to latest version
+- added "embed, ruby, output" to the reset stylesheet based on
+	Eric Meyer's recent reset styles.
+- removed duplicate styles in reset & default stylesheet
+- fixed col460 and changed it to col480
+- added text-align styles to default stylesheet
+
+
+**v1.04 Quick Fix**
+- fixed error with script call that was deprecated.
+
+
+**v1.04**
+- moved the custom script call and pngfix to the footer
+	from the bones file so it's easier to see what's being
+	called.
+- moved apple-touch-icon.png to the library/images folder so
+	file locations are consistent.
+- added a log file to keep track of changes
+- fixed html5 video functionality & fallback (w00t!)
+- moved stylesheet call below the wp_head as an experiment.
+- added wp_titletag to the header
+- added pingback function to the header
+- fixed bug where page navi would show up even on pages
+	with only one page of results.
+- changed the way page navi is called in the archives, search,
+	and index pages.
+
+
+**v1.03**
+- public release!
+- added html5 video to plugins
+- added page navi to plugins
+- general fixes and optimization
+
+
+**v1.02**
+- html5 updates and semantic layout corrected
+- added search css & custom functions
+- added functionality from the html5boilerplate
+
+
+**v1.01**
+- added related posts functions
+- general css fixes
+
+
+**v1.00**
+- i thought "there must be a better way"
+- did something about it
