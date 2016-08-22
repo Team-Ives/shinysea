@@ -24,15 +24,14 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 // Import Bootstrap for Sass
 @import "bootstrap";
 
-
 @font-face {
 	font-family: Muli;
-	src: url(/fonts/Muli-Regular.ttf);
+	src: url(../fonts/Muli-Regular.ttf);
 }
 
 @font-face {
 	font-family: 'La Belle Aurore';
-	src: url(/fonts/LaBelleAurore.ttf);
+	src: url(../fonts/LaBelleAurore.ttf);
 }
 
 $font-header: 'La Belle Aurore', cursive;
