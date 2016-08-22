@@ -1,6 +1,5 @@
-/*! Made with Bones: http://themble.com/bones :) */
+/*! Made with Bones: http://themble.com/bones :)
 
-/******************************************************************
 Site Name:
 Author:
 
@@ -14,134 +13,229 @@ of the styles inside media queries.
 Helpful articles on Sass file organization:
 http://thesassway.com/advanced/modular-css-naming-conventions
 
-******************************************************************/
+::::::::::::::::::::::::::: */
 
-/*********************
-IMPORTING PARTIALS
-These files are needed at the beginning so that we establish all
-our mixins, functions, and variables that we'll be using across
-the whole project.
-*********************/
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
 
-// normalize: http://necolas.github.io/normalize.css/
-@import "partials/normalize";
+// Import custom Bootstrap variables
+@import "partials/bootstrap-variables";
 
-// Sass variables
-@import "partials/variables";
+// Import Bootstrap for Sass
+@import "bootstrap";
 
-// typography
-@import "partials/typography";
 
-// Sass functions
-@import "partials/functions";
+@font-face {
+	font-family: Muli;
+	src: url(/fonts/Muli-Regular.ttf);
+}
 
-// import mixins
-@import "partials/mixins";
+@font-face {
+	font-family: 'La Belle Aurore';
+	src: url(/fonts/LaBelleAurore.ttf);
+}
 
-// the grid
-@import "partials/grid";
+$font-header: 'La Belle Aurore', cursive;
+$font-normal:  'Muli', 'Arial', sans-serif;
 
-/*********************
-IMPORTING MODULES
-Modules are reusable blocks or elements we use throughout the project.
-We can break them up as much as we want or just keep them all in one.
-I mean, you can do whatever you want. The world is your oyster. Unless
-you hate oysters, then the world is your peanut butter & jelly sandwich.
-*********************/
+$color-blackish:rgba(5, 31, 30, 1);
+$color-dark:    rgba(14, 96, 94, 1);
+$color-mid-dark:rgba(56, 125, 122, 1);
+$color-mid:     rgba(112, 193, 179, 1);
+$color-mid-pale:rgba(190, 230, 206, 1);
+$color-pale:    rgba(234, 247, 230, 1);
+$color-whiteish:rgba(247, 247, 247, 1);
 
-// alert boxes
-@import "modules/alerts";
+body {
+	background-color: $color-whiteish;
+	color: $color-blackish;
+	font-family: $font-normal;
+	font-size: 1.5em;
+}
 
-// buttons
-@import "modules/buttons";
+// ::::::: text ::::::: //
+a {
+	color: $color-dark;
+	text-decoration: none;
+}
 
-// forms (inputs & labels)
-@import "modules/forms";
+a:visited {
+	color: currentColor;
+}
 
-/*********************
-BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
-*********************/
+a:hover {
+	color: $color-whiteish;
+	text-decoration: none;
+}
 
-// styles in base.scss
-@import "breakpoints/base";
+h1 {
+	font-family: $font-header;
+	font-size: 40px;
+	color: $color-blackish;
+}
 
-/*********************
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
-*********************/
-@media only screen and (min-width: 481px) {
+h2 {
+	font-family: $font-header;
+	font-size: 30px;
+	color: $color-mid-dark;
+}
 
-	// styles in 481up.scss
-	@import "breakpoints/481up";
+h3 {
+	font-family: $font-header;
+	font-size: 25px;
+}
 
-} // end of media query
+h4 {
+	font-family: $font-normal;
+	font-size: 25px;
+}
 
-/*********************
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 768px) {
+h5 {
+	font-family: $font-normal;
+	font-size: 20px;
+}
 
-	// styles in 768up.scss
-	@import "breakpoints/768up";
 
-} // end of media query
+// ::::::: header / title banner ::::::: //
+.site-header {
+	background-color: $color-pale;
+	border-top: 1px solid $color-dark;
+}
 
-/*********************
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 1030px) {
+.site-title {
+	text-align: center;
+	width: 80%;
+	margin: 30px auto 15px auto;
+	h1 {
+		color: darken($color-dark, 5%);
+		margin: 2px;
+	}
+	h2 {
+		margin-top: 0px;
+	}
+}
 
-	// styles in 1030up.scss
-	@import "breakpoints/1030up";
 
-} // end of media query
+// ::::::: navigation ::::::: //
+.navbar {
+	border: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
 
-/*********************
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*********************/
-@media only screen and (min-width: 1240px) {
+.navbar-default {
+	background-color: $color-mid;
+	border-radius: 0;
+	border-top: 1px solid $color-dark;
+	border-bottom: 1px solid $color-dark;
+	a {
+		color: $color-dark;
+		font-family: $font-normal;
+		font-size: 18px;
+	}
+	.btn {
+		margin: 8px 30px;
+	}
+	.btn:hover {
+		color: $color-whiteish;
+	}
+	.btn:active {
+		box-shadow: none;
+	}
+	.btn:focus {
+		color: $color-pale;
+	}
+}
 
-	// styles in 1240up.scss
-	@import "breakpoints/1240up";
 
-} // end of media query
+// ::::::: footer ::::::: //
+.footer {
+	background-color: $color-mid;
+	width: 100%;
+	padding: 10px;
+	margin-top: 30px;
+	text-align: center;
+	border-top: 1px solid $color-dark;
+	border-bottom: 1px solid $color-dark;
+	p {
+		margin: 0;
+	}
+}
 
-/*********************
-RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
-*********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
 
-	// styles in 2x.scss
-	@import "breakpoints/2x";
+// ::::::: photo carousel ::::::: //
+.carousel-inner {
+	border-bottom: 1px solid $color-dark;
+	.item img {
+		display: inline;
+		height: 450px;
+		width: 100%;
+		object-fit: cover;
+	}
+}
 
-} // end of media query
+// .carousel-caption {
+//   background-color: transparentize($color-mid-pale, 50%);;
+// }
 
-/*********************
-PRINT STYLESHEET
-Feel free to customize this. Remember to add things that won't make
-sense to print at the bottom. Things like nav, ads, and forms should
-be set to display none.
-*********************/
-@media print {
 
-	// styles in print.scss
-	@import "partials/print";
+// ::::::: body text ::::::: //
+.about-text {
+	padding: 20px 50px;
+	text-align: justify;
+	margin: 0 -15px;
+	h2 {
+		text-align: center;
+	}
+}
 
+.blog-preview {
+	padding: 10px 50px;
+	text-align: justify;
+	h2 {
+		text-align: center;
+	}
+}
+
+// ::::::: gallery ::::::: //
+
+.gallery {
+	padding-top: 0;
+	margin: 2px;
+	img {
+		margin: 20px auto;
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 5px;
+		border: 1px solid $color-dark;
+	}
+}
+
+figure {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+figcaption {
+	position: absolute;
+	background: $color-mid-pale;
+	color: $color-blackish;
+	padding: 10px;
+	bottom: 20px;
+	width: 100%;
+	opacity: 0;
+	text-align: center;
+	border-radius: 5px;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	border: 1px solid $color-mid;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition:    all 0.8s ease;
+	-o-transition:      all 0.8s ease;
+}
+
+figure:hover figcaption {
+	opacity: .8;
 }
