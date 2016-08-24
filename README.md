@@ -1,5 +1,5 @@
 # Shiny Sea
-Shiny Sea is a Wordpress theme built on top of [Bones](http://themble.com/bones).
+Shiny Sea is a Wordpress theme built on top of [Bones](http://themble.com/bones). Check out the test deployment at http://courtney.ives.mn/coleman-site-draft/.
 
 ![](/page-shot.png)
 
