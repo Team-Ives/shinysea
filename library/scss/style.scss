@@ -133,6 +133,7 @@ h5 {
 	border: 0;
 	margin-bottom: 0;
 	text-align: center;
+	padding: 0;
 }
 
 .navbar-default {
@@ -142,6 +143,7 @@ h5 {
 	border-bottom: 1px solid $color-dark;
 	li {
 		list-style: none;
+		display: inline-flex;
 	}
 	li a {
 		@extend .btn;
@@ -149,8 +151,7 @@ h5 {
 		color: $color-dark;
 		font-family: $font-normal;
 		font-size: 18px;
-		margin: 8px 30px;
-
+		margin: 8px 20px;
 	}
 	li a:hover {
 		color: $color-whiteish;
