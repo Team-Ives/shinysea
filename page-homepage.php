@@ -37,7 +37,7 @@ Template Name: Homepage
 	while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 		<div class="col-sm-6 blog-preview">
 			<h2><?php the_title(); ?></h2>
-			<img class="home-thumb" src="<?php the_post_thumbnail_url('     '); ?>"/>
+			<img class="home-thumb" src="<?php the_post_thumbnail_url('large'); ?>"/>
 			<?php the_excerpt(); ?>
 		</div>
 	<?php endwhile; ?>
